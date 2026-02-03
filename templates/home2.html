@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+</style>
+
+<!-- Hero Section -->
+<section id="franchise" class="min-h-screen flex items-center py-24 px-4 sm:px-6 bg-white">
+  <div class="max-w-6xl mx-auto w-full">
+    <div class="text-center mb-20">
+      <div class="mb-4">
+        <span class="text-sm font-medium tracking-widest text-gray-500 uppercase">Premium Coffee Franchise</span>
+      </div>
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-light text-gray-900 mb-6 tracking-tight">
+        Partner with <span class="font-semibold">FlatWhite</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto font-light mb-8">Build a profitable business with a proven specialty coffee brand</p>
+      <button id="learnMoreBtn" class="inline-flex items-center gap-2 bg-gray-900 text-white px-10 py-4 rounded-sm font-medium hover:bg-gray-800 transition text-lg">
+        <span>Learn More</span>
+        <svg class="h-5 w-5 transition-transform" id="learnMoreIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <div id="detailsSection" class="hidden grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <!-- Left Side - Benefits -->
+      <div class="space-y-8">
+        <h2 class="text-3xl font-medium text-gray-900 mb-12">Why FlatWhite</h2>
+        
+        <div class="space-y-6">
+          <div class="border-l-2 border-gray-900 pl-6 py-2 hover:border-gray-600 transition-colors">
+            <h3 class="text-xl font-medium text-gray-900 mb-2">Proven Business Model</h3>
+            <p class="text-gray-600 leading-relaxed">Consistent revenue streams across successful locations nationwide</p>
+          </div>
+
+          <div class="border-l-2 border-gray-900 pl-6 py-2 hover:border-gray-600 transition-colors">
+            <h3 class="text-xl font-medium text-gray-900 mb-2">Complete Training & Support</h3>
+            <p class="text-gray-600 leading-relaxed">Comprehensive onboarding with ongoing operational guidance</p>
+          </div>
+
+          <div class="border-l-2 border-gray-900 pl-6 py-2 hover:border-gray-600 transition-colors">
+            <h3 class="text-xl font-medium text-gray-900 mb-2">Premium Supply Chain</h3>
+            <p class="text-gray-600 leading-relaxed">Direct access to specialty-grade coffee at competitive rates</p>
+          </div>
+
+          <div class="border-l-2 border-gray-900 pl-6 py-2 hover:border-gray-600 transition-colors">
+            <h3 class="text-xl font-medium text-gray-900 mb-2">National Marketing Support</h3>
+            <p class="text-gray-600 leading-relaxed">Leverage established brand recognition and resources</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Investment Details -->
+      <div class="bg-gray-50 rounded-sm p-12 border border-gray-200">
+        <h3 class="text-2xl font-medium text-gray-900 mb-10">Investment Overview</h3>
+        
+        <div class="space-y-8">
+          <div class="pb-6 border-b border-gray-200">
+            <p class="text-xs font-medium text-gray-500 mb-2 tracking-widest uppercase">Initial Investment</p>
+            <p class="text-4xl font-light text-gray-900">$250K - $500K</p>
+          </div>
+
+          <div class="pb-6 border-b border-gray-200">
+            <p class="text-xs font-medium text-gray-500 mb-2 tracking-widest uppercase">Average Unit Volume</p>
+            <p class="text-4xl font-light text-gray-900">$800K+</p>
+          </div>
+
+          <div class="pb-6 border-b border-gray-200">
+            <p class="text-xs font-medium text-gray-500 mb-2 tracking-widest uppercase">Payback Period</p>
+            <p class="text-4xl font-light text-gray-900">18-24 <span class="text-2xl text-gray-600">Months</span></p>
+          </div>
+
+          <div class="pb-6">
+            <p class="text-xs font-medium text-gray-500 mb-2 tracking-widest uppercase">Net Profit Margins</p>
+            <p class="text-4xl font-light text-gray-900">25-35%</p>
+          </div>
+        </div>
+
+        <a href="{% url 'signup' %}" class="mt-8 w-full flex items-center justify-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-sm font-medium hover:bg-gray-800 transition text-base">
+          <span>Start Application</span>
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById('learnMoreBtn').addEventListener('click', function() {
+    const detailsSection = document.getElementById('detailsSection');
+    const icon = document.getElementById('learnMoreIcon');
+    const btn = document.getElementById('learnMoreBtn');
+    
+    if (detailsSection.classList.contains('hidden')) {
+      detailsSection.classList.remove('hidden');
+      detailsSection.classList.add('grid');
+      icon.style.transform = 'rotate(180deg)';
+      btn.querySelector('span').textContent = 'Show Less';
+      // Smooth scroll to the section
+      setTimeout(() => {
+        detailsSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    } else {
+      detailsSection.classList.add('hidden');
+      detailsSection.classList.remove('grid');
+      icon.style.transform = 'rotate(0deg)';
+      btn.querySelector('span').textContent = 'Learn More';
+    }
+  });
+</script>
+
+<!-- CTA Section -->
+<section class="py-24 px-4 sm:px-6 bg-gray-950">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="mb-4">
+      <span class="text-xs font-medium tracking-widest text-gray-400 uppercase">Get Started</span>
+    </div>
+    <h2 class="text-4xl sm:text-5xl font-light text-white mb-6">Ready to Partner?</h2>
+    <p class="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">Take the first step toward building your FlatWhite franchise</p>
+    <a href="{% url 'signup' %}" class="inline-flex items-center gap-2 bg-white text-gray-900 px-10 py-4 rounded-sm font-medium hover:bg-gray-100 transition text-base">
+      <span>Begin Application</span>
+      <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Locations Section -->
+<section class="py-24 px-4 sm:px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="mb-3">
+        <span class="text-xs font-medium tracking-widest text-gray-500 uppercase">Network Expansion</span>
+      </div>
+      <h2 class="text-4xl sm:text-5xl font-light text-gray-900 mb-4">Growing Nationwide</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Join our expanding network of premium coffee destinations</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <!-- Active Locations Card -->
+      <div class="bg-white border border-gray-200 p-10 text-center hover:shadow-lg transition-shadow">
+        <h3 class="text-5xl font-light text-gray-900 mb-2">5</h3>
+        <p class="text-lg font-medium text-gray-900 mb-3">Active Locations</p>
+        <p class="text-gray-600 mb-6">Serving excellence daily</p>
+        <div class="pt-6 border-t border-gray-200">
+          <p class="text-sm text-gray-500">Batangas • Laguna • Cavite • Lipa</p>
+        </div>
+      </div>
+
+      <!-- Brewing Soon Card -->
+      <div class="bg-white border border-gray-200 p-10 text-center hover:shadow-lg transition-shadow">
+        <h3 class="text-5xl font-light text-gray-900 mb-2">2</h3>
+        <p class="text-lg font-medium text-gray-900 mb-3">Opening Soon</p>
+        <p class="text-gray-600 mb-6">In development</p>
+        <div class="pt-6 border-t border-gray-200">
+          <p class="text-sm text-gray-500">Capiz • Batangas</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center">
+      <a href="{% url 'signup' %}" class="inline-flex items-center gap-2 bg-gray-900 text-white px-10 py-4 rounded-sm font-medium hover:bg-gray-800 transition text-lg">
+          <span>Apply for Franchise Now</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

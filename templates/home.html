@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Franchise Section -->
+<section id="franchise" class="min-h-screen flex items-center py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative">
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{% static 'banner.jpg' %}');"></div>
+  <!-- Dark overlay with gradient -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/75 to-black/80"></div>
+  
+  <div class="max-w-7xl mx-auto w-full relative z-10">
+    <div class="text-center mb-16 sm:mb-20">
+      <h1 class="text-6xl sm:text-7xl md:text-8xl font-bold text-white mb-6">We Are FlatWhite</h1>
+      <p class="text-2xl sm:text-3xl text-gray-300 px-4 max-w-3xl mx-auto">Join the FlatWhite franchise and own a proven, profitable business</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-20 items-start">
+      <!-- Left Side - Benefits -->
+      <div class="space-y-6">
+        <h2 class="text-4xl sm:text-5xl font-bold text-white mb-10">Why Partner With Us</h2>
+        
+        <div class="space-y-6">
+          <div class="group relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 rounded-2xl blur group-hover:blur-md transition-all duration-300"></div>
+            <div class="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div class="flex gap-5 items-start">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-green-400 to-emerald-500 shadow-lg shadow-green-500/30">
+                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-2">Proven Business Model</h3>
+                  <p class="text-lg text-gray-300">Successful locations across the country with consistent revenue streams</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 rounded-2xl blur group-hover:blur-md transition-all duration-300"></div>
+            <div class="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div class="flex gap-5 items-start">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-blue-400 to-cyan-500 shadow-lg shadow-blue-500/30">
+                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-2">Complete Training & Support</h3>
+                  <p class="text-lg text-gray-300">Comprehensive onboarding and ongoing operational support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 rounded-2xl blur group-hover:blur-md transition-all duration-300"></div>
+            <div class="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div class="flex gap-5 items-start">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-purple-400 to-pink-500 shadow-lg shadow-purple-500/30">
+                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-2">Premium Supply Chain</h3>
+                  <p class="text-lg text-gray-300">Direct access to specialty-grade coffee and equipment at competitive rates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="group relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 rounded-2xl blur group-hover:blur-md transition-all duration-300"></div>
+            <div class="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
+              <div class="flex gap-5 items-start">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center h-16 w-16 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 shadow-lg shadow-amber-500/30">
+                    <svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-2xl font-semibold text-white mb-2">National Marketing Support</h3>
+                  <p class="text-lg text-gray-300">Leverage our brand recognition and marketing resources</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side - Investment Details -->
+      <div class="group relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-white/20 to-white/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+        <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-10 sm:p-12 border border-white/30 shadow-2xl hover:border-white/50 transition-all duration-500">
+          <h3 class="text-4xl sm:text-5xl font-bold text-white mb-12 text-center">Investment Overview</h3>
+          
+          <div class="space-y-8">
+            <div class="text-center pb-8 border-b border-white/20">
+              <p class="text-sm font-semibold text-gray-400 mb-3 tracking-wider">INITIAL INVESTMENT</p>
+              <p class="text-5xl sm:text-6xl font-bold text-white">$250K - $500K</p>
+            </div>
+
+            <div class="text-center pb-8 border-b border-white/20">
+              <p class="text-sm font-semibold text-gray-400 mb-3 tracking-wider">AVERAGE UNIT VOLUME</p>
+              <p class="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">$800K+</p>
+            </div>
+
+            <div class="text-center pb-8 border-b border-white/20">
+              <p class="text-sm font-semibold text-gray-400 mb-3 tracking-wider">PAYBACK PERIOD</p>
+              <p class="text-5xl sm:text-6xl font-bold text-white">18-24 <span class="text-3xl text-gray-300">Months</span></p>
+            </div>
+
+            <div class="text-center">
+              <p class="text-sm font-semibold text-gray-400 mb-3 tracking-wider">NET PROFIT MARGINS</p>
+              <p class="text-5xl sm:text-6xl font-bold bg-gradient-to-r from-amber-400 to-orange-500 bg-clip-text text-transparent">25-35%</p>
+            </div>
+          </div>
+
+          <a href="{% url 'signup' %}" class="mt-10 w-full flex items-center justify-center gap-3 bg-white text-black px-8 py-5 rounded-xl font-bold hover:bg-gray-100 transition transform hover:scale-105 hover:shadow-2xl text-xl">
+            <span>Start Your Franchise Journey</span>
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Locations Section -->
+<section class="py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative overflow-hidden">
+  <!-- Map Background -->
+  <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://api.mapbox.com/styles/v1/mapbox/light-v10/static/121.0,14.5,6/1200x800?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw'); filter: blur(3px) grayscale(60%);"></div>
+  <div class="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black"></div>
+  
+  <div class="max-w-7xl mx-auto relative z-10">
+    <div class="text-center mb-16 sm:mb-20">
+      <h2 class="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6">Growing Nationwide</h2>
+      <p class="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto">Join our expanding network of premium coffee destinations</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-16 mb-16">
+      <!-- Active Locations Card -->
+      <div class="group relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500/20 to-emerald-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+        <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-10 sm:p-12 border border-white/20 shadow-2xl hover:border-green-400/40 transition-all duration-500 hover:transform hover:scale-105">
+          <div class="flex flex-col items-center text-center">
+            <div class="bg-gradient-to-br from-green-400 to-emerald-500 rounded-full p-6 mb-6 shadow-lg shadow-green-500/50">
+              <svg class="h-12 w-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-4xl sm:text-5xl font-bold text-white mb-4">5</h3>
+            <p class="text-2xl sm:text-3xl font-semibold text-green-400 mb-3">Active Locations</p>
+            <p class="text-gray-300 text-lg">Thriving coffee destinations serving excellence daily</p>
+            <div class="mt-8 pt-8 border-t border-white/20 w-full">
+              <div class="flex items-center justify-center gap-2 text-gray-400">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                </svg>
+                <span class="text-sm">Batangas • Laguna • Cavite • Lipa</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brewing Soon Card -->
+      <div class="group relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-amber-500/20 to-orange-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+        <div class="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-10 sm:p-12 border border-white/20 shadow-2xl hover:border-amber-400/40 transition-all duration-500 hover:transform hover:scale-105">
+          <div class="flex flex-col items-center text-center">
+            <div class="bg-gradient-to-br from-amber-400 to-orange-500 rounded-full p-6 mb-6 shadow-lg shadow-amber-500/50 animate-pulse">
+              <svg class="h-12 w-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-4xl sm:text-5xl font-bold text-white mb-4">2</h3>
+            <p class="text-2xl sm:text-3xl font-semibold text-amber-400 mb-3">Brewing Soon</p>
+            <p class="text-gray-300 text-lg">New locations preparing to serve our community</p>
+            <div class="mt-8 pt-8 border-t border-white/20 w-full">
+              <div class="flex items-center justify-center gap-2 text-gray-400">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path>
+                </svg>
+                <span class="text-sm">Capiz • Batangas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center">
+      <div class="inline-block bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-lg rounded-2xl p-8 sm:p-10 border border-white/30 shadow-2xl">
+        <p class="text-2xl sm:text-3xl text-white font-semibold mb-6">Bring FlatWhite to Your City</p>
+        <p class="text-gray-300 mb-8 max-w-2xl">We're expanding rapidly and looking for passionate partners to grow with us</p>
+        <a href="{% url 'signup' %}" class="inline-flex items-center gap-3 bg-white text-black px-10 py-4 rounded-xl font-bold hover:bg-gray-100 transition transform hover:scale-105 hover:shadow-2xl text-lg">
+          <span>Apply for Your Territory</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 sm:py-20 md:py-24 px-4 sm:px-6 relative overflow-hidden">
+  <!-- Background image -->
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{% static 'coffee_banner3.jpg' %}');"></div>
+  <!-- Glass overlay -->
+  <div class="absolute inset-0 bg-gray/70 backdrop-blur-[2px]"></div>
+  
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="bg-white/60 backdrop-blur-l rounded-3xl p-12 sm:p-12 md:p-16 border border-white/80 shadow-2xl">
+      <h2 class="text-4xl sm:text-4xl md:text-5xl font-bold text-black mb-6 sm:mb-7">Ready to Join FlatWhite?</h2>
+      <p class="text-xl sm:text-xl md:text-2xl text-gray-800 mb-12 sm:mb-12 px-2 max-w-2xl mx-auto">Take the first step toward owning a successful franchise. Limited territories available.</p>
+      <a href="{% url 'signup' %}" class="inline-block bg-black text-white px-12 sm:px-12 py-5 sm:py-5 rounded-lg font-bold hover:bg-gray-900 transition transform hover:scale-105 hover:shadow-2xl text-xl sm:text-xl">
+        Apply Now
+      </a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
